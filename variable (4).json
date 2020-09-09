@@ -1,0 +1,19 @@
+{	"dev" : {
+	"DB_CDL_STAGE" : "cdl_acscoll",
+	"STG_ROUTER_TABLE" : "cdl_acscoll_wifi_params_prq",
+	"DB_TDM" : "cdl_tdata_model",
+	"DB_AUDIT" : "imd_tdata_model",
+	"DB_STAGE_AVAYA" : "stg_avaya",
+	"App_Name" : "RouterData",
+	"MetastoreURI" : "thrift://lxcdhmasterv2d.dc.ht.hr:9083,thrift://lxcdhmasterv3d.dc.ht.hr:9083",
+	"HivePrincipal" : "",
+	"sparkWarehouseDir" : "hdfs://nameservicedev1/cdl/tdata_model/",
+	"ROUTER_AUDIT_TABLE" : "router_data_audit",
+	"STG_HOSTS_TABLE" : "cdl_acscoll_hosts_prq",
+    "STG_ROUTER_TABLE" : "cdl_acscoll_wifi_params_prq"
+	},
+	"test" : {
+	},
+	"prod" : {
+	}
+}
