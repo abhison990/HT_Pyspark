@@ -1,0 +1,23 @@
+Install JDK 8
+Download and Install spark from Apache site
+install python3.6,pip3 and py4j
+Refer below link for more steps.
+https://towardsdatascience.com/installing-pyspark-with-java-8-on-ubuntu-18-04-6a9dea915b5b
+
+
+export SPARK_HOME=~/Downloads/spark-2.4.7-bin-hadoop2.7
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3
+export PATH=$SPARK_HOME:$PATH:~/.local/bin:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
+
+
+import pyspark
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+.master("local") \
+.appName("Word Count") \
+.config("spark.some.config.option", "some-value") \
+.getOrCreate()
